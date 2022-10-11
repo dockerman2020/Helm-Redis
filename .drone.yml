@@ -2,6 +2,7 @@ kind: pipeline
 type: kubernetes
 name: RedisBuild
 
+steps:
 - name: lint chart
   image: pelotech/drone-helm3
   settings:
@@ -11,7 +12,7 @@ name: RedisBuild
 
 - name: Deploy Redis.
   image: pelotech/drone-helm3
-  namespace: trivy-demo
+  namespace: trivy-redis
   settings:
     mode: upgrade
     chart: ./
