@@ -12,12 +12,12 @@ steps:
 
 - name: Deploy Redis.
   image: pelotech/drone-helm3
-  namespace: trivy-redis
   settings:
     mode: upgrade
     chart: ./
     release: redis-server
     value_files: ./values.yaml
+    values: --namespace trivy-redis
   environment:
     kube_api_server:
       from_secret: k8s_server
