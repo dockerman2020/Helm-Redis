@@ -19,7 +19,7 @@ steps:
     value_files: ./values.yaml
     values: --namespace trivy-redis
   environment:
-    kube_api_server:
+    API_SERVER:
       from_secret: k8s_server
     kube_token:
       from_secret: k8s_token
