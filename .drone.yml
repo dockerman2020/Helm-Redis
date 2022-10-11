@@ -21,7 +21,7 @@ steps:
   environment:
     API_SERVER:
       from_secret: k8s_server
-    kube_token:
+    KUBERNETES_TOKEN:
       from_secret: k8s_token
     kube_certificate:
       from_secret: k8s_crt
