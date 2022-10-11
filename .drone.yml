@@ -12,8 +12,8 @@ steps:
 
 - name: Deploy Redis.
   image: pelotech/drone-helm3
-  namespace: trivy-redis
   settings:
+    namespace: trivy-redis
     mode: upgrade
     chart: ./
     release: redis-server
