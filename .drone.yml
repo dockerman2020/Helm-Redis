@@ -18,7 +18,7 @@ steps:
     chart: ./
     release: redis-server
     value_files: ./values.yaml
-    dry-run: TRUE
+    dry-run: 1
   environment:
     API_SERVER:
       from_secret: k8s_server
