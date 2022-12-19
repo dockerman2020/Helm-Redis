@@ -9,6 +9,12 @@ steps:
     mode: lint
     chart: ./
     value_files: ./values.yaml
+  when:
+    event:
+      branch: main
+        - push
+        - pull_request
+        - custom
 
 - name: Deploy Redis dry-run.
   image: pelotech/drone-helm3
@@ -26,6 +32,12 @@ steps:
       from_secret: k8s_token
     KUBE_CERTIFICATE:
       from_secret: k8s_crt
+  when:
+    event:
+      branch: main
+        - push
+        - pull_request
+        - custom
 
 - name: Deploy Redis.
   image: pelotech/drone-helm3
@@ -38,7 +50,13 @@ steps:
   environment:
     API_SERVER:
       from_secret: k8s_server
-    KUBERNETES_TOKEN:
+    KUBE_TOKEN:
       from_secret: k8s_token
     KUBE_CERTIFICATE:
       from_secret: k8s_crt
+  when:
+    event:
+      branch: main
+        - push
+        - pull_request
+        - custom
