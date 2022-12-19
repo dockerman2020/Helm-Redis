@@ -12,9 +12,7 @@ steps:
   when:
     event:
       branch: main
-        - push
         - pull_request
-        - custom
 
 - name: Deploy Redis dry-run.
   image: pelotech/drone-helm3
@@ -35,9 +33,7 @@ steps:
   when:
     event:
       branch: main
-        - push
         - pull_request
-        - custom
 
 - name: Deploy Redis.
   image: pelotech/drone-helm3
@@ -57,6 +53,4 @@ steps:
   when:
     event:
       branch: main
-        - push
         - pull_request
-        - custom
