@@ -26,9 +26,4 @@ maintainers:
 name: redis
 sources:
 - https://github.com/bitnami/containers/tree/main/bitnami/redis
-<<<<<<< HEAD
-# version: 17.2.0 - previous version
-=======
-# version: 17.2.0
->>>>>>> main
 version: 17.3.17
