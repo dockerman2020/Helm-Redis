@@ -2,11 +2,6 @@ kind: pipeline
 type: kubernetes
 name: RedisBuild
 
-<<<<<<< HEAD
-# Pipeline configuration
-=======
-#Pipeline configuration
->>>>>>> main
 steps:
 - name: lint chart
   image: pelotech/drone-helm3
