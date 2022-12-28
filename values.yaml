@@ -1337,7 +1337,7 @@ pdb:
 tls:
   ## @param tls.enabled Enable TLS traffic
   ##
-  enabled: true
+  enabled: false
   ## @param tls.authClients Require clients to authenticate
   ##
   authClients: true
