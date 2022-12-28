@@ -1352,13 +1352,13 @@ tls:
   certificatesSecret: ""
   ## @param tls.certFilename Certificate filename
   ##
-  certFilename: "./tls/redis.pem"
+  certFilename: "tls/redis.pem"
   ## @param tls.certKeyFilename Certificate Key filename
   ##
-  certKeyFilename: "./tls/redis-key.pem"
+  certKeyFilename: "tls/redis-key.pem"
   ## @param tls.certCAFilename CA Certificate filename
   ##
-  certCAFilename: "./tls/ca.pem"
+  certCAFilename: "tls/ca.pem"
   ## @param tls.dhParamsFilename File containing DH params (in order to support DH based ciphers)
   ##
   dhParamsFilename: ""
